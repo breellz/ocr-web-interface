@@ -1,283 +1,184 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css?family=Teko&display=swap" rel="stylesheet">
-	<meta name="viewport" content="user-scalable=yes,width=device-width,initial-scale=1,maximum-scale=1">
-	<title>
-		Department of Statistics, Optical Character Recognition web interface
-	</title>
-
-	<style>
-		* {
-			padding: 0;
-
-			margin: 0;
-		}
-
-		header {
-			font-size: 1.6em;
-			height: 100%;
-			overflow: hidden;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			flex-direction: column;
-			color: aqua;
-			font-family: 'Teko', sans-serif;
-			text-align: center;
-		}
-
-
-		body {
-			background: white;
-			color: white;
-			background-image: url("./1.jpg");
-			background-position: center center;
-			background-repeat: no-repeat;
-			background-size: cover;
-			background-color: black;
-			max-height: 100%;
-		}
-
-		h2,
-		h3,
-		h4 {
-			margin: 8px 0px;
-			font-family: 'Teko', sans-serif;
-			text-align: center;
-			color: aqua;
-
-		}
-
-		#custom-button {
-			padding: 10px;
-			color: white;
-			background-color: #009578;
-			border: 1px solid #000;
-			border-radius: 5px;
-			cursor: pointer;
-
-		}
-
-		#custom-button:hover {
-			background-color: #00b28f;
-		}
-
-		#custom-text {
-			margin-left: 10px;
-			font-family: 'Teko', sans-serif;
-			color: #aaa;
-		}
-
-		p {
-			font-size: 1em;
-		}
-
-		/* styling the nav element */
-
-		.topnav {
-			background-color: #333;
-			overflow: hidden;
-			position: fixed;
-			top: 0;
-			left: 70%;
-			z-index: 1;
-		}
-
-		.topnav a {
-			float: right;
-			color: aqua;
-			text-align: center;
-			padding: 14px 16px;
-			text-decoration: none;
-			font-size: 17px;
-		}
-
-		.topnav a:hover {
-			background-color: white;
-			color: black;
-		}
-
-		.topnav a.active {
-			color: white;
-		}
-
-		p {
-			line-height: 2;
-
-		}
-
-		.wrapper {
-			width: 100%;
-			margin: 0 auto;
-			/*height: 100%;*/
-		}
-
-		section {
-			padding: 16px;
-			font-size: 1.3em;
-		}
-
-		#credits {
-			background-color: grey;
-			border-style: solid;
-			border-radius: 1px;
-			border-color: aqua;
-		}
-
-		#notes {
-			background-color: #2e2b2b;
-			border-style: solid;
-			border-radius: 1px;
-			border-color: aqua;
-		}
-
-		#about {
-			border-style: solid;
-			border-radius: 1px;
-			border-color: aqua;
-		}
-
-		#navbarCollapse {
-			z-index: 1;
-		}
-	</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Teko&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/glider.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Optical Character Recognition</title>
 </head>
-<!-- the navbar -->
-<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-	<a href="#" class="navbar-brand"></a>
-	<img src="stat.jpg" alt="statistics" height="28">
-	<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-		<span class="navbar-toggler-icon"></span>
-	</button>
-
-	<div class="collapse navbar-collapse" id="navbarCollapse">
-		<div class="navbar-nav">
-			<a href="index.html" class="nav-item nav-link active">Home</a>
-			<a href="#about" class="nav-item nav-link disabled" tabindex="-1">About</a>
-			<a href="#credits" class="nav-item nav-link">Credits</a>
-			<a href="#notes" class="nav-item nav-link">Notes</a>
-		
-			
-		</div>
-
-	</div>
-</nav>
 
 <body>
-	<!--<div class="topnav">
-				<a href="#notes">Notes</a>
-				<a href="#credits">Credits</a>
-				<a href="#about ">About</a>
-				<a class="active" href="index.html">Home</a>
-		</div>-->
+  <nav>
+    <div class="logo">
+      <a href="#">
+        <img src="images/logo.png" alt="Logo">
+      </a>
+    </div>
 
-	<header>
-		<h1>Optical Character Recognition</h1>
-		<h2>Department of Statistics</h2>
-		<input type="file" id="real-file" hidden="hidden">
-		<button type="button" id="custom-button">Choose A File</button>
-		<span id="custom-text">No file chosen</span><br>
-	</header>
+    <ul class="desktop-nav">
+      <li><a href="#about">About</a></li>
+      <li><a href="#credit">Credits</a></li>
+      <li><a href="#notes">Notes</a></li>
+      <li><a href="#camera">Webcam</li>
+    </ul>
 
-	<!-- header ends-->
+    <div class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </div>
 
-	<div id="about" class="wrapper">
-		<section class="About">
-			<div class="description">
-				<h2>About This Project</h2>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis iste consequatur nulla nam deleniti
-					aspernatur odit eveniet, cum corrupti nihil aperiam facere porro illum dolorum, molestias
-					repellendus? Minima sapiente illum cum quam impedit tempora distinctio molestiae laudantium dolore
-					aliquam mollitia velit unde, dolorem a deserunt quod aliquid ex officia! Eum corrupti fugiat nostrum
-					fugit hic impedit eius, nemo tempora debitis, asperiores molestias. Amet eaque alias inventore
-					saepe! In aspernatur voluptas odit facilis, possimus fugit. Maiores tempore cumque iure voluptatum
-					consequuntur recusandae corrupti, perspiciatis ruaerat aperiam quae maioalias itaque quo quae cumque
-					recusandae! Eligendi, reprehenderit. Quidem qui in eligendi sit eius labore voluptatibus molestias,
-					perspiciatis quos, culpa dolore odio beatae itaque! Consectetur aperiam non expedita quidem sapiente
-					debitis recusandae nesciunt nisi, laboriosam quos mollitia deserunt temporibus officia impedit
-					exercitationem iusto, facere commodi nobis minima architecto! Sint autem corporis aut natus in
-					dolore expedita voluptates magni?</p>
-			</div><br>
-			<!--<div class="thumbnail"> 
-				<img src="about.jpg" alt="about ocr">
-			</div>-->
-		</section>
-	</div>
-	<div id="credits" class="wrapper">
-		<section class="Abou">
-			<div class="description">
-				<h2>Credits</h2>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis iste consequatur nulla nam deleniti
-					aspernatur odit eveniet, cum corrupti nihil aperiam facere porro illum dolorum, molestias
-					repellendus? Minima sapiente illum cum quam impedit tempora distinctio molestiae laudantium dolore
-					aliquam mollitia velit unde, dolorem a deserunt quod aliquid ex officia! Eum corrupti fugiat nostrum
-					fugit hic impedit eius, nemo tempora debitis, asperiores molestias. Amet eaque alias inventore
-					saepe! In aspernatur voluptas odit facilis, possimus fugit. Maiores tempore cumque iure voluptatum
-					consequuntur recusandae corrupti, perspiciatis ruaerat aperiam quae maioalias itaque quo quae cumque
-					recusandae! Eligendi, reprehenderit. Quidem qui in eligendi sit eius labore voluptatibus molestias,
-					perspiciatis quos, culpa dolore odio beatae itaque! Consectetur aperiam non expedita quidem sapiente
-					debitis recusandae nesciunt nisi, laboriosam quos mollitia deserunt temporibus officia impedit
-					exercitationem iusto, facere commodi nobis minima architecto! Sint autem corporis aut natus in
-					dolore expedita voluptates magni?</p>
-			</div><br>
-			<!--<div class="thumbnail"> 
-				<img src="about.jpg" alt="about ocr">
-			</div>-->
-		</section>
-	</div>
-	<div id="notes" class="wrapper">
-		<section class="About">
-			<div class="description">
-				<h2>
-					</h>Notes</h2>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis iste consequatur nulla nam deleniti
-					aspernatur odit eveniet, cum corrupti nihil aperiam facere porro illum dolorum, molestias
-					repellendus? Minima sapiente illum cum quam impedit tempora distinctio molestiae laudantium dolore
-					aliquam mollitia velit unde, dolorem a deserunt quod aliquid ex officia! Eum corrupti fugiat nostrum
-					fugit hic impedit eius, nemo tempora debitis, asperiores molestias. Amet eaque alias inventore
-					saepe! In aspernatur voluptas odit facilis, possimus fugit. Maiores tempore cumque iure voluptatum
-					consequuntur recusandae corrupti, perspiciatis ruaerat aperiam quae maioalias itaque quo quae cumque
-					recusandae! Eligendi, reprehenderit. Quidem qui in eligendi sit eius labore voluptatibus molestias,
-					perspiciatis quos, culpa dolore odio beatae itaque! Consectetur aperiam non expedita quidem sapiente
-					debitis recusandae nesciunt nisi, laboriosam quos mollitia deserunt temporibus officia impedit
-					exercitationem iusto, facere commodi nobis minima architecto! Sint autem corporis aut natus in
-					dolore expedita voluptates magni?</p>
-			</div>
-			<!--<div class="thumbnail"> 
-				<img src="about.jpg" alt="about ocr">
-			</div>-->
-		</section>
-	</div>
-	<script>
-		const realFileBtn = document.getElementById('real-file');
-		const customBtn = document.getElementById('custom-button');
-        const customtext = document.getElementById('custom-text')
+    <div class="close-btn">
+      <i class="fas fa-times"></i>
+    </div>
 
-		//To click the hidden button through the visible one
+    <ul class="mobile-nav">
+      <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+      <li><a href="#credit"><i class="fas fa-briefcase"></i>Credits</a></li>
+      <li><a href="#camera"><i class="fas fa-comments"></i>Camera</a></li>
+    </ul>
 
-		customBtn.addEventListener('click', function () {
-			realFileBtn.click();
-		})
+  </nav>
 
-		realFileBtn.addEventListener('change', function () {
-			if (realFileBtn.value) {
-				customtext.innerHTML = realFileBtn.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
-			} else {
-				customtext.innerHTML = "No file chosen";
-			}
-		});
-	</script>
-	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
-		integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
-		crossorigin="anonymous"></script>
-	<script src="js/tether.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-	<script src="js/ie10-viewport-bug-workaround.js"></script>
-	<script src="js/Bootstrap_tutorial.js"></script>
+  <header>
+    <video class="main-video" poster="images/poster.png" loop autoplay muted>
+      <source src="videos/Binary.mp4">
+    </video>
+    <h1>Optical Character Recognition</h1>
+    <h2>Department of Statistics</h2>
+    <p>Choose a file or Use the webcam</p>
+    <input type="file" id="real-file" hidden="hidden">
+    <button type="button" id="custom-button">Choose A File</button>
+    <span id="custom-text">No file chosen</span><br>
+  </header>
+
+  <!-- cam div-->
+  <div id="camera">
+    <div id="container">
+      <video autoplay="true" id="videoElement">
+      </video>
+    </div><br>
+    <div class="capturediv">
+      <button type="button" id="capture">Capture</button><br><br>
+    </div>
+    <div id="capturediv2"><br>
+      <canvas id="canvas" width="320" height="320"></canvas>
+    </div><br>
+    <div class="capturediv">
+      <button type="button" id='do'>Recognize Text</button>
+    </div>
+    <!--  <div id='results'><br>
+    <input type="textarea" width="320px" height="320px"></input>
+    </div>-->
+  </div>
+
+<div id="about">
+  <div class="wrapper">
+    <section class="about">
+      <div class="description">
+        <h2>About The Project</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum, labore?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A ducimus numquam doloribus, minus hic nostrum!</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta quaerat officia voluptas reiciendis quis,
+          amet repudiandae ad eum aspernatur quos.</p>
+      </div>
+      <div class="thumbnail">
+        <img src="images/about.jpg" alt="About the project">
+      </div>
+    </section>
+  </div>
+</div>
+
+  <!-- About Section Ends -->
+
+  <div id="credit"></div>
+
+  <section class="work">
+    <div class="wrapper">
+      <h2>Credits</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem neque assumenda quod itaque quaerat nemo
+        inventore corporis, recusandae, vel impedit, delectus soluta tempora repellendus accusamus aspernatur iusto
+        error ad qui iure ex. Repudiandae suscipit neque praesentium excepturi dolores doloremque veniam enim?
+        Distinctio perspiciatis dignissimos alias quo laborum architecto vero maxime.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda quisquam delectus magnam perferendis,
+        tempore eveniet. Et quis reiciendis laborum, laboriosam deleniti repellat ullam similique perspiciatis ea sunt
+        deserunt blanditiis fugit iure id neque corporis exercitationem. Voluptate id ratione culpa perspiciatis totam
+        accusamus nobis, dignissimos quos delectus debitis possimus, sunt distinctio et non tempore ipsum? Error
+        eligendi excepturi, officiis fuga assumenda consectetur. Quis dolores iure ea perspiciatis tempore quaerat
+        laborum rerum. Ipsam eum pariatur labore tempora, minus corrupti commodi qui ullam nobis, alias maxime molestiae
+        incidunt quae, accusantium quia doloremque autem quis odit ab sed. Enim magni in repellendus et illum.
+      </p>
+
+  </section>
+
+  <!-- Work section ends -->
+
+  <div id=notes></div>
+
+  <div class="wrapper">
+    <section class="testimonials">
+      <h2>Notes</h2>
+      <div class="glider-contain">
+        <div class="glider">
+          <div class="testimonial">
+            <img src="images/testimonial1.jpg" alt="Testimonial">
+            <h3></h3>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates voluptatibus fugit deleniti similique
+              unde consequuntur alias odit odio debitis accusamus voluptate, assumenda eius, voluptatum rerum
+              repellendus, adipisci dolores nostrum illum!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta eaque accusamus in delectus, aperiam omnis
+              magni, reiciendis at nemo quia mollitia consequatur eius! Nam maxime, delectus animi odit dignissimos
+              suscipit minima repellendus doloremque magnam minus aliquid eum voluptates perspiciatis earum, autem illo
+              quam in impedit repellat? Ducimus incidunt fugit delectus, repudiandae obcaecati fugiat asperiores dolore
+              quo exercitationem autem placeat, ea laboriosam, enim est t aliquam quasi nobis iusto quidem distinctio
+              saepe repellat dolorum voluptate dolor ex nihil delectus, totam ducimus maxime rem necessitatibus
+              recusandae animi accusantium enim reprehenderit. Quam fugiat perferendis sequi, assumenda beatae expedita
+              maxime obcaecati, recusandae qui earum ad repudiandae nam reprehenderit tempore. Inventore harum, est
+              veniam ipsa quasi, blanditiis dignissimos atque ratione ad maxime itaque dolores corrupti totam temporibus
+              quisquam mollitia aliquid ea?
+            </p>
+          </div>
+    </section>
+  </div>
+  <!-- notes section ends -->
+  <footer>
+    <div class="social">
+      <h3>Follow me On</h3>
+      <div class="social-icons">
+        <a href="http://www.facebook.com/breellz"><i class="fab fa-facebook"></i></a>
+        <a href="http://www.twitter.com/breellz"><i class="fab fa-twitter-square"></i></a>
+        <a href="http://www.instagram.com/breellzfit"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <p>Developed by Owolabi Bassit</p>
+  </footer>
+
+  <!-- Footer Ends -->
+
+  <script src="js/main.js"></script>
+
+  <script src="js/glider.min.js"></script>
+
+  <script>
+
+    new Glider(document.querySelector(".glider"), {
+      slidesToShow: 1,
+      dots: "#dots",
+      arrows: {
+        prev: '.glider-prev',
+        next: '.glider-next'
+      }
+    })
+
+  </script>
+
 </body>
 
 </html>
